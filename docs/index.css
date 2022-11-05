@@ -1,0 +1,7 @@
+button {
+  padding: 15px;
+}
+
+button.paused {
+  background: #ad50ff;
+}
