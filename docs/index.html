@@ -12,6 +12,13 @@
     <!-- THREE.js must be supplied -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.js"></script>
 
+    <!-- mediapipe -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils_3d/control_utils_3d.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose/pose.js" crossorigin="anonymous"></script>
+
     <!-- XR Extras - provides utilities like load screen, almost there, and error handling.
          See github.com/8thwall/web/tree/master/xrextras -->
     <script src="//cdn.8thwall.com/web/xrextras/xrextras.js"></script>
@@ -35,8 +42,11 @@
   </head>
 
   <body>
+    <div class="square-box">
+      <div class="landmark-grid-container"></div>
+    </div>
     <!-- The AR canvas -->
-    <canvas id="camerafeed"></canvas>
+    <canvas id="camerafeed" class="canvas-child"></canvas>
     <!-- <canvas id="testCanvas"></canvas> -->
 
     <!-- A button to pause the camera feed. -->

@@ -5,6 +5,7 @@
 import { customThreejsPipelineModule } from "./customThreejsPipelineModule.js";
 import { initScenePipelineModule } from "./threejsSceneInit.js";
 import { bodySegmentationPipelineModule } from "./bodySegmentation.js";
+import { blazePoseDetectionPipelineModule } from "./blazePoseDetection.js";
 
 const onxrloaded = () => {
   const canvas = document.getElementById("camerafeed");
@@ -21,7 +22,8 @@ const onxrloaded = () => {
     XR8.CameraPixelArray.pipelineModule(),
     // XRExtras.Loading.pipelineModule(),
     initScenePipelineModule(),
-    bodySegmentationPipelineModule(),
+    // bodySegmentationPipelineModule(),
+    blazePoseDetectionPipelineModule(),
   ]);
 
   // Open the camera and start running the camera run loop.
