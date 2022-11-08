@@ -18,6 +18,15 @@ It is implemented with reference to here.
 
 https://google.github.io/mediapipe/solutions/pose.html
 
+### how to use
+change the comment out, bodySegmentationPipelineModule() & blazePoseDetectionPipelineModule()
+
+>XR8.addCameraPipelineModules([<br>
+>...<br>
+>  bodySegmentationPipelineModule(),<br>
+>  // blazePoseDetectionPipelineModule(),<br>
+>]);<br>
+
 <br><br>
 install
 `npm install`
