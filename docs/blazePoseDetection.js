@@ -1,7 +1,7 @@
 /* global XR8 */
 /* global THREE */
 
-import { setSegmentTexture } from "./customThreejsPipelineModule.js";
+// import { setSegmentTexture } from "./customThreejsPipelineModule.js";
 // import { LandmarkGrid } from "@mediapipe/control_utils_3d/control_utils_3d";
 // import { controls } from "@mediapipe/control_utils/control_utils";
 // import { drawingUtils } from "@mediapipe/drawing_utils/drawing_utils";
@@ -23,13 +23,15 @@ export const blazePoseDetectionPipelineModule = () => {
     name: "blazePoseDetection",
 
     onStart: async ({ canvas, canvasWidth, canvasHeight }) => {
+      const hoge = document.getElementsByClassName("square-box")[0];
+      hoge.style.display = "block";
+
       videoElement = document.getElementsByTagName("video")[0];
       landmarkContainer = document.getElementsByClassName("landmark-grid-container")[0];
       grid = new LandmarkGrid(landmarkContainer);
 
       function onResults (results) {
         processing = false;
-        // setSegmentTexture(results.segmentationMask);
         if (!results.poseLandmarks) {
           return;
         }

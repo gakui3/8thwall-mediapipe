@@ -22,8 +22,8 @@ const onxrloaded = () => {
     XR8.CameraPixelArray.pipelineModule(),
     // XRExtras.Loading.pipelineModule(),
     initScenePipelineModule(),
-    // bodySegmentationPipelineModule(),
-    blazePoseDetectionPipelineModule(),
+    bodySegmentationPipelineModule(),
+    // blazePoseDetectionPipelineModule(),
   ]);
 
   // Open the camera and start running the camera run loop.
