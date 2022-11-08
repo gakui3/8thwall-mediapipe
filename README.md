@@ -1,13 +1,24 @@
-# 8thwall_localtest
+# 8thwall-mediapipe
 
-8thwallプロジェクトをローカルで動かしてみたテストプロジェクトです。
+This repository runs segmentation and pose using mediapipe on 8thwall.
 
+### segmentation
 
-githubpagesでホスティングしています。  
-https://thedesignium.github.io/8thwall_localtest/
+<img src="https://user-images.githubusercontent.com/65954422/200508401-796a7dd6-6b3c-4fe4-90ed-3dce5f6a4a9f.gif" height="500">
 
-<img src="https://user-images.githubusercontent.com/65954422/177927696-744256ec-89fc-4b11-9b31-3f0064290b31.png" height="250" width="250">
+It is implemented with reference to here.
 
+https://google.github.io/mediapipe/solutions/selfie_segmentation.html
+
+<br><br>
+### pose
+<img src="https://user-images.githubusercontent.com/65954422/200509107-92e3959c-a40e-45d9-95a6-cde33491187a.gif" height="500">
+
+It is implemented with reference to here.
+
+https://google.github.io/mediapipe/solutions/pose.html
+
+<br><br>
 install
 `npm install`
 
@@ -16,24 +27,3 @@ watch
 
 build
 `npm run build`
-
-</br>
-</br>
-ローカルで動かすための手順メモ
-
-1. 8thwallでセルフホスティングでプロジェクトを作成
-2. setting→app keyをコピー
-3. index.html内にapp keyをコピー  
-  `src="//apps.8thwall.com/xrweb?appKey=<app key>"` 
-4. 8thwallが配布しているサーバーアプリを実行
-    1. ./sarveフォルダに移動して、
-    2. npm install  
-    3. cd ../ 
-    4. ./serve/bin/serve -d ./  
-    or　ⅲの後に、
-    4. chmod u+x runserve.command
-    5. runserve.commandファイルから起動可能
-5. 発行されたurl(例:`https://192.168.0.101:8080`)を8thwallのプロジェクトページのドメインに設定
-
-option: eslintの設定    
-  'npx eslint --init'
