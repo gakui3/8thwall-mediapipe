@@ -17,6 +17,7 @@ https://google.github.io/mediapipe/solutions/selfie_segmentation.html
 It is implemented with reference to here.
 
 https://google.github.io/mediapipe/solutions/pose.html
+<br><br>
 
 ### how to use
 change the comment out, bodySegmentationPipelineModule() & blazePoseDetectionPipelineModule()
