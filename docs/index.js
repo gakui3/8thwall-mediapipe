@@ -2,10 +2,11 @@
 /* global XR8 */
 /* global XRExtras */
 
-import { customThreejsPipelineModule } from "./customThreejsPipelineModule.js";
-import { initScenePipelineModule } from "./threejsSceneInit.js";
-import { bodySegmentationPipelineModule } from "./bodySegmentation.js";
-import { blazePoseDetectionPipelineModule } from "./blazePoseDetection.js";
+import {customThreejsPipelineModule} from "./customThreejsPipelineModule.js";
+import {initScenePipelineModule} from "./threejsSceneInit.js";
+import {bodySegmentationPipelineModule} from "./bodySegmentation.js";
+import {blazePoseDetectionPipelineModule} from "./blazePoseDetection.js";
+import {blazeHandsDetectionPipelineModule} from "./blazeHandsDetection.js";
 
 const onxrloaded = () => {
   const canvas = document.getElementById("camerafeed");
@@ -21,13 +22,14 @@ const onxrloaded = () => {
     XRExtras.FullWindowCanvas.pipelineModule(),
     XR8.CameraPixelArray.pipelineModule(),
     // XRExtras.Loading.pipelineModule(),
-    initScenePipelineModule(),
-    bodySegmentationPipelineModule(),
+    // initScenePipelineModule(),
+    // bodySegmentationPipelineModule(),
     // blazePoseDetectionPipelineModule(),
+    blazeHandsDetectionPipelineModule(),
   ]);
 
   // Open the camera and start running the camera run loop.
-  XR8.run({ canvas });
+  XR8.run({canvas});
 };
 
 window.onload = () => {
